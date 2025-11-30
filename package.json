@@ -1,0 +1,27 @@
+{
+  "name": "ai-revolution-homepage",
+  "version": "0.1.0",
+  "private": true,
+  "description": "AI Revolution の LP（Next.js + TypeScript + Tailwind）",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "start:clean": "lsof -ti:3000 | xargs kill -9 2>/dev/null || true && next start",
+    "kill:3000": "lsof -ti:3000 | xargs kill -9 2>/dev/null || echo 'No process found on port 3000'"
+  },
+  "dependencies": {
+    "next": "16.0.5",
+    "react": "19.2.0",
+    "react-dom": "19.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "24.10.1",
+    "@types/react": "19.2.7",
+    "autoprefixer": "10.4.19",
+    "postcss": "8.4.35",
+    "tailwindcss": "3.4.3",
+    "typescript": "5.6.2"
+  }
+}
+
