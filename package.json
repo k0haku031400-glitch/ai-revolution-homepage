@@ -6,11 +6,16 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "start:clean": "lsof -ti:3000 | xargs kill -9 2>/dev/null || true && next start",
-    "kill:3000": "lsof -ti:3000 | xargs kill -9 2>/dev/null || echo 'No process found on port 3000'"
+    "start": "lsof -ti:3000 | xargs kill -9 2>/dev/null || true && next start",
+    "start:clean": "npm run kill:3000 && next start",
+    "kill:3000": "lsof -ti:3000 | xargs kill -9 2>/dev/null || echo 'No process found on port 3000'",
+    "lint": "echo 'No linter configured'",
+    "type-check": "tsc --noEmit",
+    "clean": "rm -rf .next out",
+    "clean:build": "npm run clean && npm run build"
   },
   "dependencies": {
+    "framer-motion": "^12.23.25",
     "next": "16.0.5",
     "react": "19.2.0",
     "react-dom": "19.2.0"
@@ -19,9 +24,9 @@
     "@types/node": "24.10.1",
     "@types/react": "19.2.7",
     "autoprefixer": "10.4.19",
+    "baseline-browser-mapping": "^2.8.32",
     "postcss": "8.4.35",
     "tailwindcss": "3.4.3",
     "typescript": "5.6.2"
   }
 }
-

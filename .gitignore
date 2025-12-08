@@ -57,3 +57,6 @@ logs
 .DS_Store
 Thumbs.db
 
+# Other projects in the same directory
+/ai-revolution-website/
+

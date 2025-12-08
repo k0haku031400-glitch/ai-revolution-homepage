@@ -39,14 +39,39 @@ npm run dev
 # 本番用ビルド
 npm run build
 
-# 本番サーバーを起動（ビルド後）
+# 本番サーバーを起動（ビルド後、自動的にポート3000をクリア）
 npm run start
+
+# ポート3000を使用中のプロセスを終了してから起動（明示的に）
+npm run start:clean
 
 # ポート3000を使用中のプロセスを終了
 npm run kill:3000
+
+# TypeScriptの型チェック
+npm run type-check
+
+# ビルドキャッシュをクリア
+npm run clean
+
+# クリーンビルド（キャッシュクリア + ビルド）
+npm run clean:build
 ```
 
 開発サーバーは `http://localhost:3000` で起動します。
+
+### ⚠️ よくあるエラーと対処法
+
+- **`EADDRINUSE: address already in use :::3000`**
+  - 解決: `npm run start` は自動的にポートをクリアします。手動でクリアする場合は `npm run kill:3000` を実行
+
+- **`Missing script: "export"`**
+  - 原因: 存在しないスクリプトを実行しようとした
+  - 解決: `npm run` で利用可能なスクリプトを確認
+
+- **`EINVALIDTAGNAME`**
+  - 原因: 無効なパッケージ名を指定
+  - 解決: 正しいパッケージ名を使用
 
 ## 📁 プロジェクト構造
 
