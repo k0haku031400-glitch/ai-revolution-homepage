@@ -207,7 +207,12 @@ export const Contact: React.FC = () => {
                 <option value="ホームページ制作">ホームページ制作</option>
                 <option value="その他">その他</option>
               </select>
-            </motion.label>
+            </motion.label>cd "/Users/nakatanikohaku/Documents/AI Revolution/あいれぼ　ホームページ"  # すでに居るなら不要
+
+git init
+git add .
+git commit -m "first commit"
+git branch -M main
 
             <motion.label
               className="block space-y-2 text-sm text-slate-600"
