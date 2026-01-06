@@ -34,7 +34,6 @@ export const Philosophy: React.FC = () => {
       x: 0,
       transition: {
         duration: 0.8,
-        ease: "easeOut",
       },
     },
   };
@@ -46,7 +45,6 @@ export const Philosophy: React.FC = () => {
       x: 0,
       transition: {
         duration: 0.8,
-        ease: "easeOut",
       },
     },
   };

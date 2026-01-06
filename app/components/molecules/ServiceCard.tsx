@@ -24,6 +24,8 @@ export const ServiceCard = ({
 
   return (
     <motion.article
+      id={`service-${id}`}
+      data-id={id}
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}
