@@ -41,7 +41,6 @@ export const Business: React.FC = () => {
       y: 0,
       transition: {
         duration: 0.5,
-        ease: "easeOut",
       },
     },
   };
@@ -70,7 +69,7 @@ export const Business: React.FC = () => {
           whileInView="visible"
           viewport={{ once: true, margin: "-50px" }}
         >
-          {businessItems.map((item, index) => (
+          {businessItems.map((item) => (
             <motion.div
               key={item}
               variants={itemVariants}

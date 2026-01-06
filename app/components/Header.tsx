@@ -2,6 +2,9 @@
 
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
+import Image from "next/image";
+import Link from "next/link";
 import { Button } from "@/app/components/atoms/Button";
 import type { NavItem } from "@/types";
 
@@ -15,6 +18,8 @@ const navItems: NavItem[] = [
   { href: "#services", label: "サービス" },
   { href: "#philosophy", label: "理念" },
   { href: "#company", label: "会社概要" },
+  { href: "#history", label: "沿革" },
+  { href: "#results", label: "実績" },
 ];
 
 /**
@@ -25,6 +30,7 @@ const navItems: NavItem[] = [
 export const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("#hero");
+  const pathname = usePathname();
   const { scrollY } = useScroll();
 
   useMotionValueEvent(scrollY, "change", (latest) => {
@@ -65,31 +71,70 @@ export const Header: React.FC = () => {
       }}
     >
       <div className="mx-auto flex h-20 max-w-6xl items-center justify-between px-4 md:px-6">
-        <motion.a
-          href="#hero"
-          className="text-xl font-bold text-ai-red"
+        <motion.div
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
-          AI Revolution
-        </motion.a>
+          <Link href="#hero">
+            <Image
+              src="/logo-ai-revolution.jpg"
+              alt="AI Revolution ロゴ"
+              width={140}
+              height={40}
+              className="object-contain"
+              priority
+            />
+          </Link>
+        </motion.div>
 
         <nav className="hidden items-center gap-6 md:flex">
-          {navItems.map((item) => (
-            <motion.a
-              key={item.href}
-              href={item.href}
-              className={`text-sm font-medium transition-colors duration-300 ${
-                activeSection === item.href
-                  ? "text-ai-red"
-                  : "text-slate-700 hover:text-ai-red"
-              }`}
-              whileHover={{ y: -2 }}
-              whileTap={{ y: 0 }}
-            >
-              {item.label}
-            </motion.a>
-          ))}
+          {navItems.map((item) => {
+            const isActive =
+              item.href.startsWith("#")
+                ? activeSection === item.href
+                : pathname === item.href;
+            const isExternalLink = item.href.startsWith("http");
+            const isAnchorLink = item.href.startsWith("#");
+
+            // アンカーリンク（#で始まる）または外部リンクの場合は<a>タグを使用
+            if (isAnchorLink || isExternalLink) {
+              return (
+                <motion.a
+                  key={item.href}
+                  href={item.href}
+                  className={`text-sm font-medium transition-colors duration-300 ${
+                    isActive
+                      ? "text-ai-red"
+                      : "text-slate-700 hover:text-ai-red"
+                  }`}
+                  whileHover={{ y: -2 }}
+                  whileTap={{ y: 0 }}
+                >
+                  {item.label}
+                </motion.a>
+              );
+            }
+
+            // 通常のページリンクの場合はNext.jsのLinkを使用
+            return (
+              <motion.div
+                key={item.href}
+                whileHover={{ y: -2 }}
+                whileTap={{ y: 0 }}
+              >
+                <Link
+                  href={item.href}
+                  className={`text-sm font-medium transition-colors duration-300 ${
+                    isActive
+                      ? "text-ai-red"
+                      : "text-slate-700 hover:text-ai-red"
+                  }`}
+                >
+                  {item.label}
+                </Link>
+              </motion.div>
+            );
+          })}
         </nav>
 
         <div className="hidden md:block">

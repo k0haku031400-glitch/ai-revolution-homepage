@@ -4,6 +4,8 @@ import { Business } from "@/app/components/sections/Business";
 import { Services } from "@/app/components/sections/Services";
 import { Philosophy } from "@/app/components/sections/Philosophy";
 import { Company } from "@/app/components/sections/Company";
+import { History } from "@/app/components/sections/History";
+import { Results } from "@/app/components/sections/Results";
 import { Contact } from "@/app/components/sections/Contact";
 import { Footer } from "@/app/components/sections/Footer";
 import { ScrollToTop } from "@/app/components/molecules/ScrollToTop";
@@ -23,6 +25,8 @@ const Page: React.FC = () => {
         <Services />
         <Philosophy />
         <Company />
+        <History />
+        <Results />
         <Contact />
       </main>
 

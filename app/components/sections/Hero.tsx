@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Button } from "@/app/components/atoms/Button";
+import { TopCurve } from "@/app/components/atoms/TopCurve";
 
 /**
  * ヒーローセクションコンポーネント
@@ -25,7 +26,6 @@ export const Hero: React.FC = () => {
       y: 0,
       transition: {
         duration: 0.8,
-        ease: "easeOut",
       },
     },
   };
@@ -37,13 +37,17 @@ export const Hero: React.FC = () => {
       y: 0,
       transition: {
         duration: 1,
-        ease: "easeOut",
       },
     },
   };
 
   return (
-    <section id="hero" className="relative bg-ai-red py-32 px-6 text-white overflow-hidden">
+    <section id="hero" className="relative z-10 bg-[#E60000] py-32 px-6 text-white overflow-hidden">
+      {/* トップカーブ（最上部に表示、絶対配置でHeroセクションの上部に重ねる） */}
+      <div className="absolute top-0 left-0 right-0 z-0">
+        <TopCurve />
+      </div>
+
       {/* 背景アニメーション */}
       <motion.div
         className="absolute inset-0 opacity-10"
@@ -58,11 +62,11 @@ export const Hero: React.FC = () => {
           ease: "linear",
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-br from-ai-red via-red-600 to-red-800" />
+        <div className="absolute inset-0 bg-[#E60000]" />
       </motion.div>
 
       <motion.div
-        className="relative mx-auto flex max-w-[1200px] flex-col items-center gap-6 text-center z-10"
+        className="relative z-20 mx-auto flex max-w-[1200px] flex-col items-center gap-6 text-center"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
