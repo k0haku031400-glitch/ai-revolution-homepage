@@ -113,3 +113,4 @@ AI Revolution 株式会社
 
 © 2025 AI Revolution 株式会社. All Rights Reserved.
 
+# ai-revo-website
