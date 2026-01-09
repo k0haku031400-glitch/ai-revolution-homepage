@@ -78,7 +78,7 @@ export const Header: React.FC = () => {
           <Link href="#hero">
             <Image
               src="/logo-ai-revolution.jpg"
-              alt="AI Revolution ロゴ"
+              alt="株式会社AI Revolution ロゴ"
               width={140}
               height={40}
               className="object-contain"

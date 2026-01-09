@@ -98,7 +98,7 @@ export const Hero: React.FC = () => {
           variants={itemVariants}
           className="max-w-3xl text-lg md:text-xl text-white/90 leading-relaxed"
         >
-          AIを誰でも使える簡単なツールに。人に寄り添うAIで一人でも多くの人が豊かな暮らしをできる社会を目指します。
+          株式会社AI Revolutionは、企業のAI導入やAI開発を支援します。AI技術を活用した業務効率化から、実現したいAI案の開発、企業を目指す学生の育成・支援まで、現代社会に革命的なソリューションを提供します。
         </motion.p>
 
         <motion.div variants={itemVariants}>
