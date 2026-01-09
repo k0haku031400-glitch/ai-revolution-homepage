@@ -11,21 +11,22 @@ const noto = Noto_Sans_JP({
 });
 
 export const metadata: Metadata = {
-  title: "AI Revolution | AI Always With You",
+  metadataBase: new URL("https://ai-revo.co.jp"),
+  title: "AI開発・AI受託開発ならAI Revolution｜中小企業向けAI導入",
   description:
-    "AI Revolutionのホームページ。AIをより身近なものに。AI設計、AI教育・導入支援、ホームページ制作などのサービスを提供しています。",
-  keywords: ["AI", "人工知能", "AI開発", "AI教育", "ホームページ制作", "大阪"],
+    "AI Revolutionは中小企業・スタートアップ向けにAI開発・受託開発を提供。AI×EMS（エネルギーマネジメント）やAIキャリア分析ツールを開発し、企業と人に寄り添うAIを実装します。",
+  keywords: ["AI", "人工知能", "AI開発", "AI受託開発", "AI導入", "中小企業", "スタートアップ", "AI×EMS", "AIキャリア分析", "大阪"],
   authors: [{ name: "AI Revolution" }],
   openGraph: {
-    title: "AI Revolution | AI Always With You",
-    description: "AIを誰でも使える簡単なツールに。人に寄り添うAIで一人でも多くの人が豊かな暮らしをできる社会を目指します。",
+    title: "AI開発・AI受託開発ならAI Revolution｜中小企業向けAI導入",
+    description: "AI Revolutionは中小企業・スタートアップ向けにAI開発・受託開発を提供。AI×EMS（エネルギーマネジメント）やAIキャリア分析ツールを開発し、企業と人に寄り添うAIを実装します。",
     type: "website",
     locale: "ja_JP",
   },
   twitter: {
     card: "summary_large_image",
-    title: "AI Revolution | AI Always With You",
-    description: "AIを誰でも使える簡単なツールに。人に寄り添うAIで一人でも多くの人が豊かな暮らしをできる社会を目指します。",
+    title: "AI開発・AI受託開発ならAI Revolution｜中小企業向けAI導入",
+    description: "AI Revolutionは中小企業・スタートアップ向けにAI開発・受託開発を提供。AI×EMS（エネルギーマネジメント）やAIキャリア分析ツールを開発し、企業と人に寄り添うAIを実装します。",
   },
   robots: {
     index: true,
