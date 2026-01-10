@@ -14,8 +14,7 @@ import type { NavItem } from "@/types";
  */
 const navItems: NavItem[] = [
   { href: "#hero", label: "メイン" },
-  { href: "#business", label: "事業内容" },
-  { href: "#services", label: "サービス" },
+  { href: "#action-base", label: "Action Base" },
   { href: "#philosophy", label: "理念" },
   { href: "#company", label: "会社概要" },
   { href: "#history", label: "沿革" },

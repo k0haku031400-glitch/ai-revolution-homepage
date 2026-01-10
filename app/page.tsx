@@ -1,7 +1,6 @@
 import { Header } from "@/app/components/Header";
 import { Hero } from "@/app/components/sections/Hero";
-import { Business } from "@/app/components/sections/Business";
-import { Services } from "@/app/components/sections/Services";
+import { ActionBase } from "@/app/components/sections/ActionBase";
 import { Philosophy } from "@/app/components/sections/Philosophy";
 import { Company } from "@/app/components/sections/Company";
 import { History } from "@/app/components/sections/History";
@@ -21,8 +20,7 @@ const Page: React.FC = () => {
 
       <main className="space-y-0">
         <Hero />
-        <Business />
-        <Services />
+        <ActionBase />
         <Philosophy />
         <Company />
         <History />
