@@ -117,16 +117,19 @@ aws amplify start-job \
      NEXT_PUBLIC_SITE_URL = https://ai-revo.co.jp
      ```
 
-2. **または amplify.yml で設定**（ファイルが存在する場合）
+2. **amplify.yml で設定**（既に設定済み）
+   - `amplify.yml`ファイルに環境変数の設定が含まれています
+   - ビルド時に自動的に `.env.production` に `NEXT_PUBLIC_SITE_URL=https://ai-revo.co.jp` が追加されます
    ```yaml
    version: 1
    frontend:
      phases:
        preBuild:
          commands:
-           - echo "NEXT_PUBLIC_SITE_URL=https://ai-revo.co.jp" >> .env.production
+           - npm ci
        build:
          commands:
+           - echo "NEXT_PUBLIC_SITE_URL=https://ai-revo.co.jp" >> .env.production
            - npm run build
    ```
 
