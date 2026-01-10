@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
 import { Instagram } from "lucide-react";
 
 /**
@@ -47,19 +46,12 @@ export const Footer: React.FC = () => {
               aria-label="TikTok"
             >
               <div className="rounded-full bg-black p-3 shadow-lg transition-all duration-300 group-hover:shadow-xl flex items-center justify-center w-12 h-12 border-2 border-slate-200 ring-2 ring-transparent group-hover:ring-slate-300">
-                <Image
-                  src="/tiktok-logo.png"
+                <img
+                  src="/tiktok-icon.png"
                   alt="TikTok"
                   width={24}
                   height={24}
-                  className="object-contain"
-                  onError={(e) => {
-                    // フォールバック: tiktok-logo.pngが存在しない場合はtiktok-icon.pngを使用
-                    const imgElement = e.currentTarget;
-                    if (!imgElement.src.includes('tiktok-icon.png')) {
-                      imgElement.src = '/tiktok-icon.png';
-                    }
-                  }}
+                  className="object-contain w-6 h-6"
                 />
               </div>
             </motion.a>
