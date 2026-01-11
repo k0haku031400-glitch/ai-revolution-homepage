@@ -115,10 +115,7 @@ export const ActionBase: React.FC = () => {
                 {card.fee && (
                   <div className="pt-2">
                     <p className="text-xl md:text-2xl font-bold text-slate-900">
-                      月額 <span style={{ color: accentBlue }}>1,500円</span>
-                      <span className="text-base md:text-lg font-normal text-slate-600 ml-2">
-                        （Memberステージ）
-                      </span>
+                      月額 <span style={{ color: accentBlue }}>1,700円</span>
                     </p>
                   </div>
                 )}
