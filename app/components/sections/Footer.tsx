@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Instagram } from "lucide-react";
+import Link from "next/link";
 
 /**
  * フッターコンポーネント
@@ -56,6 +57,24 @@ export const Footer: React.FC = () => {
               </div>
             </motion.a>
           </div>
+
+          {/* フッターメニュー */}
+          <motion.div
+            className="flex items-center justify-center gap-4 text-sm text-slate-500"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            <motion.div whileHover={{ y: -2 }} whileTap={{ scale: 0.95 }}>
+              <Link
+                href="/tokushoho"
+                className="text-slate-600 hover:text-ai-red transition-colors duration-300"
+              >
+                特定商取引法に基づく表記
+              </Link>
+            </motion.div>
+          </motion.div>
 
           {/* コピーライト */}
           <p className="text-center text-sm text-slate-500">

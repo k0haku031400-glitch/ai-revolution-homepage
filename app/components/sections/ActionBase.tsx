@@ -22,7 +22,7 @@ export const ActionBase: React.FC = () => {
         "そう思いながら、今日まで何も変わらなかった君へ。",
         "Action Baseは、あなたの「妄想」を「現実の事業」へと変えるための起業家育成基地です。ここは学ぶ場所ではなく、明日から「行動者」として生きるための実戦場です。",
       ],
-      fee: "月額 1,500円（Memberステージ）",
+      fee: "月額 1,700円 ",
       features: null,
       buttonText: "詳細を確認する",
       buttonHref: pdfUrl,
