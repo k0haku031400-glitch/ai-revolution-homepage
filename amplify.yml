@@ -9,11 +9,10 @@ frontend:
         - echo "NEXT_PUBLIC_SITE_URL=https://ai-revo.co.jp" >> .env.production
         - npm run build
   artifacts:
-    baseDirectory: .next
+    baseDirectory: .
     files:
       - '**/*'
   cache:
     paths:
       - node_modules/**/*
       - .next/cache/**/*
-      - .next/**/*
