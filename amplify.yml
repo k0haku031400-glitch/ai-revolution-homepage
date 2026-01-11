@@ -6,13 +6,11 @@ frontend:
         - npm ci
     build:
       commands:
-        - echo "NEXT_PUBLIC_SITE_URL=https://ai-revo.co.jp" >> .env.production
         - npm run build
   artifacts:
-    baseDirectory: .
+    baseDirectory: .next  # ← ここが重要です
     files:
       - '**/*'
   cache:
     paths:
       - node_modules/**/*
-      - .next/cache/**/*
